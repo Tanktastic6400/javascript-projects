@@ -3,12 +3,12 @@ let shuttleName = String("Determination");
 let shuttleSpeed = Number(17500);
 let distanceToMars = Number(225000000);
 let distanceToMoon = Number(384400);
-let milesToMars;
-let hoursToMars;
-let daysToMars;
-let milesToMoon;
-let hoursToMoon;
-let daysToMoon;
+let milesToMars= kilometersToMars * kpm;
+let hoursToMars= milesToMars / shuttleSpeed;
+let daysToMars= hoursToMars / 24;
+let milesToMoon = kilometersToMoon * kpm;
+let hoursToMoon = milesToMoon / shuttleSpeed;
+let daysToMoon = hoursToMoon /24;
 const kpm = Number(0.621);
 
 // Use console.log to print the 'typeof' each variable. Print one item per line.
@@ -16,13 +16,13 @@ console.log(typeof(shuttleName), typeof(shuttleSpeed), typeof(distanceToMars), t
 
 // Calculate a space mission below
 //miles to mars first
-milesToMars = distanceToMars * kpm;  //Answer is probably going to be distanceToMars = distanceToMars * kpm;
+//milesToMars = distanceToMars * kpm;  //Answer is probably going to be distanceToMars = distanceToMars * kpm;
 
 //hours to mars second
-hoursToMars = milesToMars / shuttleSpeed;
+//hoursToMars = milesToMars / shuttleSpeed;
 
 //days to mars third
-daysToMars = hoursToMars / 24;
+//daysToMars = hoursToMars / 24;
 
 // Print the results of the space mission calculations below
 console.log(shuttleName, " is ", milesToMars, " miles from mars.");
@@ -32,13 +32,13 @@ console.log("It will take " + daysToMars + " many days");
 
 // Calculate a trip to the moon below
 //miles to moon first
-milesToMoon = distanceToMoon * kpm;  //Answer is probably going to be distanceToMars = distanceToMars * kpm;
+//milesToMoon = distanceToMoon * kpm;  //Answer is probably going to be distanceToMars = distanceToMars * kpm;
 
 //hours to moon second
-hoursToMoon = milesToMoon / shuttleSpeed;
+//hoursToMoon = milesToMoon / shuttleSpeed;
 
 //days to moon third
-daysToMoon = hoursToMoon / 24;
+//daysToMoon = hoursToMoon / 24;
 
 
 // Print the results of the trip to the moon below

@@ -4,7 +4,7 @@
 // Do not worry about fixing the code yet, we will do that in the next series of exercises.
 
 let launchReady = false;
-let fuelLevel = 17000;
+let fuelLevel = 20000;
 let crewStatus = true;
 let computerStatus = 'green';
 
@@ -16,7 +16,7 @@ if (fuelLevel >= 20000) {
    launchReady = false;
 }
 
-if (crewStatus && computerStatus === 'green'){
+if (crewStatus && computerStatus === 'green' && launchReady != false){
    console.log('Crew & computer cleared.');
    launchReady = true;
 } else {

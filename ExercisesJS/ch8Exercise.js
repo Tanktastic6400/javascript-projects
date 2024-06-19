@@ -73,7 +73,7 @@ console.log(arr.join(''));
 let element1 = ['hydrogen', 'H', 1.008];
 let element2 = ['helium', 'He', 4.003];
 let element26 = ['iron', 'Fe', 55.85];
-
+let test;
 let table = [element1, element2, element26];
 
 console.log(table);
