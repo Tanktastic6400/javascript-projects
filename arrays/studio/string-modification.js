@@ -1,11 +1,22 @@
 const input = require('readline-sync');
 let str = "LaunchCode";
+let userNumber;
+let viable = false;
+
 
 //1) Use string methods to remove the first three characters from the string and add them to the end.
 //Hint - define another variable to hold the new string or reassign the new string to str.
-
-let scramble = str.slice(3);
-scramble += str.slice(0,3);
+while(!viable){
+    userNumber = input.question("Please enter the number of letters you would like to switch around: ");
+        if(userNumber < str.length){
+            viable = true;
+        }else{
+            console.log(userNumber = 3);
+            console.log("Requested number is too large, set the default letters changed to 3.")
+        }
+}//end of while
+let scramble = str.slice(userNumber);
+scramble += str.slice(0,userNumber);
 
 //Use a template literal to print the original and modified string in a descriptive phrase.
 console.log(`I have changed: ${str} to now say ${scramble}`);
