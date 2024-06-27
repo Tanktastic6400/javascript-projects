@@ -74,4 +74,4 @@ function makeDiamond(height){
 }
 
 //console.log(makeRectangle(10,14));
-console.log(makeDiamond(5));
+console.log(makeDiamond(2));
