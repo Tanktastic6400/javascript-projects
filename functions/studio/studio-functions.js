@@ -10,7 +10,7 @@
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 function reverseCharacters(str){
     let tmpArr = [];
-    
+
    if(typeof str === 'string'){ 
         tmpArr = str.split("");
         tmpArr.reverse();
@@ -20,7 +20,6 @@ function reverseCharacters(str){
         str = reverseCharacters(str);
         str = Number(str);
    }
-
 
     return str;
 }
