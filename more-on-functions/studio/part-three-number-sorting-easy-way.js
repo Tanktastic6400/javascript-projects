@@ -50,10 +50,7 @@ function descendingSort(arr){
       
       //console.log(smallestInt);
     }
-    //console.log("this is the finalSort: " + finalSort);
-    //console.log(arr);
-
-    
+  
     return finalSort;
 }
 console.log(descendingSort(nums2));
