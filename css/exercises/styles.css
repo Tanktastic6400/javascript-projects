@@ -1,1 +1,4 @@
 /* Start adding your styling below! */ 
+#abortMission:hover{
+    background-color: red;
+}
