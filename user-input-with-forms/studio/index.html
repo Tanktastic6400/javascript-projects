@@ -4,15 +4,60 @@
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
-    window.addEventListener("load", function(){
+		
         // TODO: register the handler
+		function setSearchEngine(engine, query) {
+				let address;
+				switch(engine){
+					case 'google':
+						address = `https://www.google.com/search?q=${query}`;
+					break;
+					case 'duckduckgo':
+					address = `https://www.duckduckgo.com/?q=${query}`;
+					break;
+					case 'bing':
+					address = `https://www.bing.com/search?q=${query}`;
+					break;
+					case 'ask':
+					address = `https://www.ask.com/web?q=${query}`;
+					break;
+				}
+				
+				window.location.assign(address);
+				
+			}
+		
+		window.addEventListener("load", function(){
+		let query = document.querySelector("input[name=q]");
+		let button = document.getElementById("button");
+		let engineSelected = document.querySelector("input[name=engine]:checked");
+		console.log(engineSelected.value);
+		
+		button.addEventListener("click", () => {
+			
+			setSearchEngine(engineSelected.value, query.value);
+			document
+			event.preventDefault();
+		});
+
     });
+
 	</script>
 </head>
 
 <body>
 
-	<form id="searchForm">
+	<form id="searchForm" action="" method="GET">
+		<input type="text" name="q">
+		<label><input type="radio" name="engine" value="google">  Google</label>
+		<label><input type="radio" name="engine" value="duckduckgo">  DuckDuckGo</label>
+		<label><input type="radio" name="engine" value="bing">  Bing</label>
+		<label><input type="radio" name="engine" value="ask">  Ask</label>
+		<button id="button">Go!</button>
+		
+
+		</div>
+		<!-- <input type="submit"> -->
     <!-- TODO: add form elements -->
 	</form>
 
