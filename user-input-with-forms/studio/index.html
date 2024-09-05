@@ -28,16 +28,16 @@
 			}
 		
 		window.addEventListener("load", function(){
-		let query = document.querySelector("input[name=q]");
-		let button = document.getElementById("button");
-		let engineSelected = document.querySelector("input[name=engine]:checked");
-		console.log(engineSelected.value);
-		
-		button.addEventListener("click", () => {
+	
 			
+			button.addEventListener("click", () => {
+				let query = document.querySelector("input[name=q]");
+			let button = document.getElementById("button");
+			let engineSelected = document.querySelector("input[name=engine]:checked");
+				console.log(engineSelected);
 			setSearchEngine(engineSelected.value, query.value);
-			document
-			event.preventDefault();
+			
+			// event.preventDefault();
 		});
 
     });
